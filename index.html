@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    #train {
+    #rocket {
       position: relative;
       bottom: 0;
       cursor: pointer;
@@ -12,20 +12,20 @@
   </style>
 </head>
 
-<body Style="background-color:black">
+<body style="background-image: url('Images/stars-background.jpg');">
 <h1 style="color: white;">This is my first animation.</h1> 
 <h2 style="color: white;">Tap on the rocket to launch.</h2> 
-  <img id="train" src="flying-rocket-11548702330pgavrbdfwg.png" height="100" width="200">
+  <img id="rocket" src="Images/flying-rocket.png" height="100" width="200">
 
 
   <script>
-    train.onclick = function() {
+    rocket.onclick = function() {
       let start = Date.now();
 
       let timer = setInterval(function() {
         let timePassed = Date.now() - start;
 
-        train.style.left = timePassed / 5 + 'px';
+        rocket.style.left = timePassed / 5 + 'px';
 
         if (timePassed > 3000) clearInterval(timer);
 
